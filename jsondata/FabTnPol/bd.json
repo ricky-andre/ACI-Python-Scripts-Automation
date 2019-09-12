@@ -1,0 +1,21 @@
+{
+    "fvBD": {
+        "attributes": {
+            "arpFlood": "{{arp}}",
+            "dn": "uni/tn-{{tn_name}}/BD-{{name}}",
+            "epMoveDetectMode": "",
+            "limitIpLearnToSubnets": "{{limitlearn}}",
+            "llAddr": "::",
+            "mac": "00:22:BD:F8:19:FF",
+            "multiDstPktAct": "{{mdest}}",
+            "name": "{{name}}",
+            "status": "{{status}}",
+            "unicastRoute": "{{unicast}}",
+            "unkMacUcastAct": "{{unk_unicast}}",
+            "unkMcastAct": "{{mcast}}",
+            "mcastAllow": "{{multicast}}",
+            "status": "{{status}}",
+            "descr": "{{descr}}"
+        }
+    }
+}

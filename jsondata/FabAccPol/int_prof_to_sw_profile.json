@@ -1,0 +1,18 @@
+{
+    "infraNodeP": {
+        "attributes": {
+            "dn": "uni/infra/nprof-{{name}}",
+            "name": "{{name}}"
+        },
+        "children": [
+            {
+                "infraRsAccPortP": {
+                    "attributes": {
+                        "tDn": "uni/infra/accportprof-{{int_profile}}",
+                        "status": "{{status}}"
+                    }
+                }
+            }
+        ]
+    }
+}
