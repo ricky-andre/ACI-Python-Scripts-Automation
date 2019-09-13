@@ -9,7 +9,7 @@ github project, together with the json template files:
 
 https://github.com/carlmontanari/acipdt
 
-The tool is quite straightforward, it is a collection of classes, one for each 'scope', each of them defining many functions for every 'atomic query'. Each function loads the json template file and replaces configuration variables with the passed parameters. A few contributors added some more fcuntions and template files, but 99% of the work was done by Carl (of course he's also the project's brain).
+The tool is quite straightforward, it is a collection of classes, one for each 'scope', each of them defining many functions for every 'atomic query'. Each function loads the json template file and replaces configuration variables with the passed parameters. A few contributors added some more functions and template files, but 99% of the work was done by Carl (of course he's also the project's brain).
 
 I have added a couple of query functions on my own (there's a pending pull request on his project), to retrieve useful information from the fabric. Everything is in this file:
 <B>"Aci_Cal_Toolkit.py"</B>,
