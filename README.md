@@ -29,9 +29,11 @@ The script <B>"create_switch_profiles.py"</B> retrieves all the leafs in the fab
 - an interface profile with the two node-ID
 
 For example, if the two nodes have id 141 and 142 the following objects will be created:
-"mo/uni/infra/accportprof-Leaf-141-142_IntProf"
-"mo/uni/infra/nprof-Leaf-141-142_LeafProf"
-"uni/infra/nprof-Leaf-141-142_LeafProf/leaves-Leaf-141-142_SwSel-typ-range"
-(same objects for node 141 and node 142)
+
+- "mo/uni/infra/accportprof-Leaf-141-142_IntProf"
+- "mo/uni/infra/nprof-Leaf-141-142_LeafProf"
+- "uni/infra/nprof-Leaf-141-142_LeafProf/leaves-Leaf-141-142_SwSel-typ-range"
+
+(same objects for single node 141 and node 142)
 
 This is useful in case the fabric is designed to have vpc only toward two consecutive switches: you would create interface selectors with vpc policies, associating it under the desired interface profile. For devices connected to single hosts, you can use the other profiles.
