@@ -28,7 +28,7 @@ The script <B>"create_switch_profiles.py"</B> retrieves all the leafs in the fab
 - a switch selector containing the two consecutive switches
 - an interface profile with the two node-ID
 
-For exmaple, if the two nodes have id 141 and 142 the following objects will be created:
+For example, if the two nodes have id 141 and 142 the following objects will be created:
 "mo/uni/infra/accportprof-Leaf-141-142_IntProf"
 "mo/uni/infra/nprof-Leaf-141-142_LeafProf"
 "uni/infra/nprof-Leaf-141-142_LeafProf/leaves-Leaf-141-142_SwSel-typ-range"
