@@ -19,3 +19,19 @@ The script <B>"from_nexus_to_excel_vlan_list.py"</B> parses a few Nexus configur
 The script <B>"from_vlan_list_to_aci.py"</B> is the 'heart' of the job. This is in my opinion very well commented and understandable, if you already have some python knowledge. Basicly it reads the data row by row, checks for possible, clear and trivial configuration mistakes or errors, and if necessary (i.e. if the object does not already exists) performs REST queries to the APIC. Based upon the response code (success/failure), it colors the excel cell foreground (green = ok, red = failure, yellow = no need to perform the query). The output is wrote on a new excel file with the "_out" suffix on the filename. Again, I have posted a couple of pictures just to provide an idea of what happens.
 
 Obviously, use the scripts <B>at your own risk</B>. Remember that there is a PUSH_TO_APIC flag in the Aci_Cal_Toolkit.py file, the first time set it to False to test what happens without performing real queries.
+
+The script <B>"create_switch_profiles.py"</B> retrieves all the leafs in the fabric, and automates the creation of:
+- a switch profile using the node-ID for every switch
+- a switch selector containing that single switch
+- an interface profile with the node-ID
+- a switch profile for every couple of consecutive switches
+- a switch selector containing the two consecutive switches
+- an interface profile with the two node-ID
+
+For exmaple, if the two nodes have id 141 and 142 the following objects will be created:
+"mo/uni/infra/accportprof-Leaf-141-142_IntProf"
+"mo/uni/infra/nprof-Leaf-141-142_LeafProf"
+"uni/infra/nprof-Leaf-141-142_LeafProf/leaves-Leaf-141-142_SwSel-typ-range"
+(same objects for node 141 and node 142)
+
+This is useful in case the fabric is designed to have vpc only toward two consecutive switches: you would create interface selectors with vpc policies, associating it under the desired interface profile. For devices connected to single hosts, you can use the other profiles.
