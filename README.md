@@ -11,7 +11,7 @@ https://github.com/carlmontanari/acipdt
 
 The tool is quite straightforward, it is a collection of classes, one for each 'scope', each of them defining many functions for every 'atomic query'. Each function loads the json template file and replaces configuration variables with the passed parameters. A few contributors added some more functions and template files, but 99% of the work was done by Carl (of course he's also the project's brain).
 
-I have added a couple of query functions on my own in the "Query" class, to retrieve useful information from the fabric:
+I have added a few query functions on my own in the "Query" class, to retrieve useful information from the fabric:
 - query_url
 - query_ports
 - query_all_tenants
