@@ -11,7 +11,11 @@ https://github.com/carlmontanari/acipdt
 
 The tool is quite straightforward, it is a collection of classes, one for each 'scope', each of them defining many functions for every 'atomic query'. Each function loads the json template file and replaces configuration variables with the passed parameters. A few contributors added some more functions and template files, but 99% of the work was done by Carl (of course he's also the project's brain).
 
-I have added a couple of query functions on my own in the "Query" class, to retrieve useful information from the fabric. Everything is in this file:
+I have added a couple of query functions on my own in the "Query" class, to retrieve useful information from the fabric:
+- query_url
+- query_ports
+- query_all_tenants
+Everything is in this file:
 <B>"Aci_Cal_Toolkit.py"</B>.
 
 The script <B>"from_nexus_to_excel_vlan_list.py"</B> parses a few Nexus configuration files passed as parameters, and provides an excel file containing a lot of useful information about subents, vlans, vrf, hsrp groups and so on. The idea is that of using such a file to 'easily' produce another excel file or a new tab, containing all the input data for ACI configuration (tenant, vrf, bd, epg, anp, ports to which an epg is binded). Excel files are useful because you can use the filter function, and copy/paste rows/columns to obtain the desired new excel file or tab. This can be very useful when migrations of big data centers need to be performed. A lot of time could be saved, to avoid creating manually hundreds or thousands of objects, which would be a boring, time cosuming and error-prone task. An example excel file "ACI_vlan_list.xlxs" has been uploaded ('Network' tab) to get an idea of the produced output data.
