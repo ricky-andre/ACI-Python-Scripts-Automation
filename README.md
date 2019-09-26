@@ -14,7 +14,8 @@ The tool is quite straightforward, it is a collection of classes, one for each '
 I have added a couple of query functions on my own in the "Query" class, to retrieve useful information from the fabric:
 - query_url
 - query_ports
-- query_all_tenants<P>
+- query_all_tenants
+
 Everything is in this file:
 <B>"Aci_Cal_Toolkit.py"</B>.
 
